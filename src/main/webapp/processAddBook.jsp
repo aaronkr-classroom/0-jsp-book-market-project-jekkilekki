@@ -5,6 +5,8 @@
 <%
     request.setCharacterEncoding("UTF-8");
 
+    // FileUpload handling ...
+
     String bookId = request.getParameter("bookId");
     String name = request.getParameter("name");
     String unitPrice = request.getParameter("unitPrice");
@@ -42,6 +44,7 @@
     newBook.setCategory(category);
     newBook.setUnitsInStock(stock);
     newBook.setCondition(condition);
+    newBook.setFilename(filename);
 
     dao.addBook(newBook);
 
