@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="dto.Book" %>
 <%@ page import="dao.BookRepository" %>
-<jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" />
+<!-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> -->
 
 <!DOCTYPE html>
 <html>
