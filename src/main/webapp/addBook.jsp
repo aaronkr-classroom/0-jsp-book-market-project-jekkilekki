@@ -5,6 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="./resources/css/bootstrap.min.css" />
 	<title>도서 등록</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
 		</div>
 		
 		<div class="row align-items-md-stretch">
-			<form name="newBook" action="./processAddBook.jsp" method="POST">
+			<form name="newBook" action="./processAddBook.jsp" class="form-horizontal" method="POST" enctype="multipart/form-data">
 				<div class="mb-3 row">
 					<label class="col-sm-2">도서코드</label>
 					<div class="col-sm-3">
@@ -87,6 +88,13 @@
 						<input type="radio" name="condition" value="New"> 신규도서
 						<input type="radio" name="condition" value="Old"> 중고도서
 						<input type="radio" name="condition" value="EBook"> E-book
+					</div>
+				</div>
+
+				<div class="mb-3 row">
+					<label class="col-sm-2">이미지</label>
+					<div class="col-sm-5">
+						<input type="file" name="BookImage" class="form-control" />
 					</div>
 				</div>
 				
