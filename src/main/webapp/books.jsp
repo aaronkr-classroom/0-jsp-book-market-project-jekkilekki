@@ -11,6 +11,7 @@
 	<meta charset="UTF-8">
 	<!-- BootStrap CSS URL 주소 입력 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="./resources/css/boostrap.min.css" />
 	<title>도서 목록</title>
 </head>
 <body>
@@ -36,6 +37,7 @@
 			%>
 			<div class="col-md-4">
 				<div class="h-100 p-2">
+					<img src="./resources/img/<%= Book.getFilename() %> style="width: 250px; height: 350px;" />
 					<h5><strong><%= book.getName() %></strong></h5>
 					<p><%= book.getAuthor() %></p>
 					<p><%= book.getPublisher() %> | <%= book.getUnitPrice() %>원</p>
