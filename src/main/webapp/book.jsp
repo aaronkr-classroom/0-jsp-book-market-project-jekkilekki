@@ -25,7 +25,7 @@
 		
 		<%
 			String id = request.getParameter("id");
-			BookRepository dao = BookRespository.getInstance();
+			BookRepository dao = BookRepository.getInstance();
 			Book book = dao.getBookById(id);
 		%>
 		

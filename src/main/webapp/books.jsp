@@ -37,7 +37,7 @@
 			%>
 			<div class="col-md-4">
 				<div class="h-100 p-2">
-					<img src="./resources/img/<%= Book.getFilename() %> style="width: 250px; height: 350px;" />
+					<img src="./resources/img/<%= book.getFilename() %> style="width: 250px; height: 350px;" />
 					<h5><strong><%= book.getName() %></strong></h5>
 					<p><%= book.getAuthor() %></p>
 					<p><%= book.getPublisher() %> | <%= book.getUnitPrice() %>원</p>
