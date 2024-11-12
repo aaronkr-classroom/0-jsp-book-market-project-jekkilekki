@@ -17,28 +17,28 @@ public class LogFileFilter implements Filter {
         String filename = config.getInitParameter("filename");
 
         if (filename == null) {
-            throw new ServletException("·Î±× ÆÄÀÏÀÇ ÀÌ¸§À» Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+            throw new ServletException("ë¡œê·¸ íŒŒì¼ì˜ ì´ë¦„ì„ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         }
 
         try {
             writer = new PrintWriter(new FileWriter(filename, true), true);
         } catch (IOException e) {
-            throw new ServletException("·Î±× ÆÄÀÏÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.");
+            throw new ServletException("ë¡œê·¸ íŒŒì¼ì„ ì—´ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         }
     }
 
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws ServletException, IOException {
-        writer.println("Á¢¼ÓÇÑ Å¬¶óÀÌ¾ğÆ® IP: " + req.getRemoteAddr());
+        writer.println("ì ‘ì†í•œ í´ë¼ì´ì–¸íŠ¸ IP: " + req.getRemoteAddr());
 
         long start = System.currentTimeMillis();
-        writer.println("Á¢±ÙÇÑ URL: " + getURLPath(req));
-        writer.println("¿äÃ» Ã³¸® ½ÃÀÛ ½Ã°¢: " + getCurrentTime());
+        writer.println("ì ‘ê·¼í•œ URL ê²½ë¡œ: " + getURLPath(req));
+        writer.println("ìš”ì²­ ì²˜ë¦¬ ì‹œì‘ ì‹œê°:" + getCurrentTime());
 
         chain.doFilter(req, res);
 
         long end = System.currentTimeMillis();
-        writer.println("¿äÃ» Ã³¸® Á¾·á ½Ã°¢: " + getCurrentTime());
-        writer.println("¿äÃ» Ã³¸® ¼Ò¿ä ½Ã°£: " + (end - start) + "ms");
+        writer.println("ìš”ì²­ ì²˜ë¦¬ ì¢…ë£Œ ì‹œê°:" + getCurrentTime());
+        writer.println("ìš”ì²­ ì²˜ë¦¬ ì†Œìš” ì‹œê°„:" + (end - start) + "ms");
         writer.println("=====================================");
     }
 
@@ -51,7 +51,7 @@ public class LogFileFilter implements Filter {
         String currentPath = "";
         String queryString = "";
 
-        if (req instanceof HttpServletRequest) {
+        if (request instanceof HttpServletRequest) {
             req = (HttpServletRequest) request;
             currentPath = req.getRequestURI();
             queryString = req.getQueryString();

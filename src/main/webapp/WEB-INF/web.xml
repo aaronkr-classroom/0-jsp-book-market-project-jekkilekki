@@ -13,7 +13,7 @@
             <url-pattern>/addBook.jsp</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <description>±ÇÇÑ °ü¸®ÀÚ¸í</description>
+            <description>ê¶Œí•œ ê´€ë¦¬ìëª…</description>
             <role-name>admin</role-name>
         </auth-constraint>
     </security-constraint>
