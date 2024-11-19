@@ -4,7 +4,7 @@
 <%@ page import = "jakarta.servlet.*" %>
 <%@ page import = "jakarta.servlet.http.*" %>
 <%@ page import = "org.apache.commons.fileupload2.*" %>
-<%@ page import = "org.apache.commons.fileupload2.jakarta.*" %>
+<%@ page import = "org.apache.commons.fileupload2.core.*" %>
 <%@ page import = "org.apache.commons.fileupload2.disk.*" %>
 <%@ page import = "org.apache.commons.fileupload2.servlet.*" %>
 <%@ page import = "org.apache.commons.fileupload2.FileItem" %>
