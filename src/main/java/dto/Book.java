@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Book implements Serializable {
 
 	private static final long serialVersionUID = -4274700572038677000L;
-	
+
 	private String bookId;			// 도서ID
 	private String name; 			// 도서명
 	private int unitPrice;			// 가격
@@ -17,12 +17,13 @@ public class Book implements Serializable {
 	private String releaseDate;		// 출판일 (월/년)
 	private String condition;		// 신제품 or 구제품 or 리퍼브제품
 	private String filename;		// 이미지 파일명
-	
+	private int quantity;			// 수량
+
 	// 생성자
 	public Book() {
 		super(); // Serializable() 부모 클래스의 생성자를 호출하기
 	}
-	
+
 	public Book(String bookId, String name, Integer unitPrice) {
 		this.bookId = bookId;
 		this.name = name;
@@ -117,5 +118,13 @@ public class Book implements Serializable {
 	public void setFilename(String filename) {
 		this.filename = filename;
 	}
-	
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
 }
