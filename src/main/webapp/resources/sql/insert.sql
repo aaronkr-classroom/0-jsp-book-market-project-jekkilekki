@@ -39,3 +39,5 @@ INSERT INTO book VALUES(
 	'new',
 	'ISBN1236.jpg'
 );
+
+TABLE book;
