@@ -7,6 +7,15 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="./resources/css/boostrap.min.css" />
         <title>도서 편집</title>
+        <script type="text/javascript">
+            function deleteConfirm(id) {
+                if (confirm("정말 삭제하시겠습니까?")) {
+                    location.href = "./deleteBook.jsp?id=" + id;
+                } else {
+                    return;
+                }
+            }
+        </script>
     </head>
 
     <% String edit = request.getParameter("edit"); %>
@@ -45,6 +54,9 @@
                             <% if (edit.equals("update")) { %>
                                 <a href="./updateBook.jsp?id=<%= rs.getString('b_id') %>"
                                     class="btn btn-success" role="button">수정 &raquo;</a>
+                            <% } else if (edit.equals("delete") { %>
+                                <a href="javascript:deleteConfirm('<%= rs.getString('b_id') %>')"
+                                    class="btn btn-danger" role="button">삭제 &raquo;</a>
                             <% } %>
                         </p>
                     </div>
