@@ -58,4 +58,11 @@
         <filter-name>LogFileFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <web-resource-collection>
+        <web-resource-name>BookMarket</web-resource-name>
+        <description>BookMarket Security Page</description>
+        <url-pattern>/addBook.jsp</url-pattern>
+        <url-pattern>/editBook.jsp</url-pattern>
+    </web-resource-collection>
 </web-app>
